@@ -20,12 +20,16 @@ const concesionaria = {
 
 // autosNuevos: retorna los vehiculos con menos de 100km.
 
-
+autosNuevos: function () { 
+    return this.vehiculos.filter(car => car.km < 100);
+    },
     
         
 // listaDeVentas: retorna la lista de los autos vendidos.
 
-    
+vendidos: function () {
+    return this.vehiculos.filter(car => car.vendido === true);
+    },
 
 // totalDeVentas: me retorna la suma de los importes de los vehiculos vendidos.
 
